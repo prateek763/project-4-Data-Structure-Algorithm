@@ -1,0 +1,87 @@
+Problem 1
+
+This problem can easily be solved by implementing a different variant of the binary search, as required 
+by the given time complexity. Here in this problem the executuion relies on dividing the search space in 
+two halves and checking if mid power of 2 is less or greater than the given number each time. In 
+addition it is found that square root of every number is either less than or equal to the half of the 
+number, thus last=number//2 is done to optimize the time complexity.
+
+Time and Space complexity:-
+Time complexity of this problem is O(log(n)), as we hypothetically traverse the array by using the binary
+search. The space complexity in this is independent of the input, hence it is O(1).
+
+Problem 2
+
+This problem is completely based on binary search where modiications are made on it's structure and is 
+used in a very different manner. Here as array is rotated hence we dont definitely know where the target
+number will be, hence it becomes neccessary to check both halves of the array for the given number.
+
+Time and Space complexity:-
+The time complexity of this problem is O(log(n)) as it is implemented on the basis of binary search. The
+space complexity in this is independent of the input, hence it is O(1).
+
+Problem 3
+
+This problem, as stated to be solved in time complexity of O(n*log(n)), has given the clue to be tackled
+by a variation of the merge sort algorithm. Indeed, it is a merge sort algorithm, except for the 
+particular treatment if gives to the comparison of results coming from the previous recursion, if we are 
+on the first level of the recursion. In this case, it does the comparison, as usual, but then starts 
+saving the results on alternative lists, which are then returned as the results.
+
+The usage of this alternative list saving is due to the fact that having the list perfectly sorted, if 
+we start from the index[0] and give alternatively a value to each list, occupying this value an 
+increasing digit position, we always obtain a combination that satisfies the condition of having a 
+maximum sum of two numbers and maximum a digit of difference between them.
+
+Time and Space complexity:-
+As the base of the algorithm is the merge sort, having a time complexity of O(n*log(n)), and there have 
+been no substantial modifications to the algorithm; just the addition of O(1) operations, the time 
+complexity remains equal. As for the space complexity, if we hold the assumption that python gets 
+automatically rid of each previous step auxiliary created arrays, then the space complexity is of O(n).
+
+Problem 4
+
+This problem involves only single traversal hence the pointers to denote the index in the array are used.
+one pointer denote the place for 0's and another for 2's. 1's automatically gets sorted 0's and 2's gets 
+sorted. Hence only two pointers, one pointing at the begining for 0's and another pointing at the last
+for 2's is used.
+
+Time and Space complexity:-
+The time complexity is O(n) as there is only single traversal of array. The space complexity is O(1) as 
+swaping is done in the input array itself instead of using an auxillary array for ouput.
+
+Problem 5
+
+This problem deals with the implementation of trie data stucture to store the words and check it's validity. 
+This data structure is very efficient both in terms of time as well as sapce complexity.
+
+Time and Space complexity:-
+Time complexity of searching and inserting from a trie depends on the length of the word in the operations
+of insertion and seaching. If length of word is x and the total number of words are n then the time
+complexity for these operations is O(x*n). For space complexity , in the worst case when no letter is 
+common in the words, having a node for each letter, thus the space complexity is O(n).
+
+Problem 6
+
+This problem can be solved by combining the two algorithms for finding the minimum and maximum number in 
+the array. Here the variables are used to store the min and max elements. For each iteration the element
+in the array is checked if it is smaller than previous min or larger than previous max and if so the 
+variables are updated. Thus in this way this problem can be solved in single travrsal.
+
+Time and Space complexity:-
+The time complexity of this problem is O(n) as there is only a single traversal of the array. For space
+complexity we have only two variable for storing the output, independent of the number of the elements 
+in the array, hence the space complexity is O(1).
+
+Problem 7
+
+This problem is same as the problem 5 except for the edge case. Here in this a Trie data stucture is used 
+for the heirarchy of webpages. This data structure is very efficient both in terms of time as well as 
+sapce complexity.
+
+Time and Space complexity:-
+Time complexity of searching and inserting from a trie in this case depends on the length of the path 
+in the operations of insertion and seaching. Hence the time complexity is O(n) where n is the length of
+the path. For space complexity , in the worst case when no folders are common in the path 
+common in the words, having a node for each path_block(path between forward slashes), thus the 
+space complexity is O(n).
